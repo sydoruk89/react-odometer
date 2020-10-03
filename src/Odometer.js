@@ -11,7 +11,7 @@ class Odometer extends React.Component {
   
     changeOdometer(change) {
       this.setState(prevState => {
-        return {count: prevState.count >= 9999 ? prevState.count - 10000 : prevState.count + change
+        return {count: prevState.count + change >= 10000 ? prevState.count = 0 : prevState.count + change
         }
       });
     }
